@@ -1,11 +1,16 @@
 # Implementation of the Unscented Kalman Filter on a GPU
 Using OpenCL and Eigen Linear algebra library for c++
 
-Notes on Compilation:
+Notes on Compilation using code::blocks
+
 * The Eigen library is double compressed unzip it twice.
 * After unzipping it change the name of the Eigen folder from "eigen-eigen-323c052e1731" to "Eigen" without the quotation marks.
 * Copy the Folder and place it in your compiler's include folder
 * Copy the CL folder as well and paste it in your compiler's include folder
+
+Compilation on Linux:
+* make sure you have installed the latest version of OpenCL, drivers for your devices, make and GNU GCC compiler
+* Once everything is setup simple open the linux terminal from the folder where main is ans type make and press enter. If everything is setup right the program should compile and run.
 
 Notes on Toolchain:
 
