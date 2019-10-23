@@ -63,4 +63,3 @@ cl_mem OutputBuffer3;
 cl_mem OutputBuffer4;
 //------------------------------------------------------------------------------
 // OpenCL event handles
-
