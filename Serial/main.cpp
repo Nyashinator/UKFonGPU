@@ -193,16 +193,13 @@ int main(){
 //===============================================================================
 // UKF STARTS
 //===============================================================================
- for(int j=0;j<20;j++){
+ for(int j=0;j<50;j++){
   cout << "This is cycle #" << j+1 << endl << endl;
   y = measure(x_mod);
   x_mod = state(x_mod,dt);
 //-------------------------------------------------------
  Matrix<double,n,n> E;
  Matrix<double,n,2*n+1> Z;
- //cholesky
- //LLT<Matrix<double,n,n>> lltOfA(P*sqrt(c)); //the Cholesky decomposition of P
- //E = lltOfA.matrixL(); // retrieve factor E
 //------------------------------------------------------
 
   X = sgmp(x,P,c);
@@ -310,9 +307,9 @@ int main(){
    cout << "Estimated state covariance" << endl;
    cout << P_ukf << endl << endl;
  }
-   dp = (double*)malloc(20*1);
+   /**dp = (double*)malloc(20*1);
   dp = spent.data();
-  csv_write("times.csv",dp,20,1);
+  csv_write("times.csv",dp,20,1);**/
 cout << "Serial UKF Duration: " << toc()/1e-3 << "ms" << "\n\n";
  return 0;
 }
